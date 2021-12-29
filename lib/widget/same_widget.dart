@@ -62,12 +62,13 @@ CarouselSlider buildMySlider(
     options: CarouselOptions(
       autoPlay: autoPlay,
       height: height,
-      enlargeCenterPage: true,
+      // enlargeCenterPage: true,
       viewportFraction: viewPortFraction,
     ),
     itemBuilder: (context, index, realIndex) {
       return Container(
         // color: Colors.green,
+        margin: const EdgeInsets.symmetric(horizontal: 8),
         child: Stack(
           alignment: Alignment.center,
           children: [
@@ -79,7 +80,7 @@ CarouselSlider buildMySlider(
                     child: Image.asset(list[index].img)),
                 if (showdetails) ...[
                   Container(
-                    padding: const EdgeInsets.only(top: 16),
+                    padding: const EdgeInsets.only(top: 8),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

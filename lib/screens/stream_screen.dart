@@ -43,7 +43,10 @@ class _StreamScreenState extends State<StreamScreen> {
             buildMySlider(
               trendingNowList,
               enlargeStrategy: CenterPageEnlargeStrategy.height,
-              height: size.height * 0.55,
+              height: (size.height -
+                      MediaQuery.of(context).padding.top +
+                      kToolbarHeight) *
+                  0.5,
               viewPortFraction: 0.5,
             ),
             bigTitle(

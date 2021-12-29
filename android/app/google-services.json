@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "714173385555",
+    "project_id": "dummy-55f95",
+    "storage_bucket": "dummy-55f95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714173385555:android:67ce63dec52772d83aafa6",
+        "android_client_info": {
+          "package_name": "com.example.movie_stream_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714173385555-q84if4n452dvck19cl27d5ceqt4bdpri.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.movie_stream_app",
+            "certificate_hash": "f5154313f7c29b9b6f67d358323e523cfbfe9fd8"
+          }
+        },
+        {
+          "client_id": "714173385555-n4l1mfrsonm2it7glpo76v55mui4sfld.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbPum3Ls8WX8Y7m7-9i5LtcBUVaRoQPW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714173385555-n4l1mfrsonm2it7glpo76v55mui4sfld.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
