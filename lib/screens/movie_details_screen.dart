@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_stream_app/screens/authentication%20screens/login_screen.dart';
 
 class MovieDetailsScreen extends StatefulWidget {
   const MovieDetailsScreen({Key? key}) : super(key: key);

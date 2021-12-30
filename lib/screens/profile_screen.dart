@@ -3,11 +3,14 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_stream_app/const/colors.dart';
+import 'package:movie_stream_app/screens/authentication%20screens/google_signin_provider.dart';
 import 'package:movie_stream_app/screens/movie_details_screen.dart';
+import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -42,6 +45,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser;
     return Scaffold(
       backgroundColor: darkBlue,
       body: Container(
@@ -50,18 +54,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // CircleAvatar(
+            //   backgroundImage: NetworkImage(user!.photoURL!),
+            // ),
+            // Text(
+            //   'Name: ' + user.displayName!,
+            //   style: TextStyle(color: Colors.white),
+            // ),
+            // Text(
+            //   'Email: ' + user.email!,
+            //   style: TextStyle(color: Colors.white),
+            // ),
             const Text(
               'Profile',
               style: TextStyle(color: Colors.white),
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => MovieDetailsScreen()));
+                // final provider =
+                //     Provider.of<GoogleSignInProvider>(context, listen: false);
+                // provider.logout();
+                final a = FirebaseAuth.instance;
+                a.signOut();
               },
-              child: const Text('Details Screen'),
+              child: const Text('log out'),
             )
           ],
         ),
